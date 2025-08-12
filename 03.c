@@ -39,15 +39,12 @@ tipo
           fim registro
     Pno = ponteiro para Tno
 Função IsOn(head:Pno, x: real): lógica
-var
-    current_head: Pno
 inicio
-    current_head <- head
-    enquanto current_head != NULO faça
-        se current_head^.valor = x então
+    enquanto head != NULO faça
+        se head^.valor = x então
             retorne VERDADEIRO
         fim se
-        current_head <- head^.prox
+        head <- head^.prox
     fim enquanto
     retorne FALSO
 fim Função
