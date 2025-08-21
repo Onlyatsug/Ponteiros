@@ -7,6 +7,7 @@ typedef struct Node{
     struct Node *next;
 } Node;
 
+// iterativa
 
 bool XandY(Node *head, int x, int y){
     Node *p = head;
@@ -22,6 +23,8 @@ bool XandY(Node *head, int x, int y){
     }
     return false;
 }
+
+// recursiva
 
 bool XandYR(Node *head, int x, int y){
     bool searchY(Node *head, int y){
