@@ -96,7 +96,7 @@ tipos
          fim registro
 Função InserirNoFinal(ref: head, x:string): lógico
 var
-    p, new: Pno
+    new: Pno
 inicio
     se head = NULO então
         new <- aloca(Pno)
