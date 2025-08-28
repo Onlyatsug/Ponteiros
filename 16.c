@@ -33,9 +33,7 @@ bool InserirOrdenadoR(Node **head, int id, char x){
     Node *p = *head;
     if(p == NULL || id < p->key){
         Node *new = (Node*)malloc(sizeof(Node));
-        if (new == NULL){
-            return false;
-        }
+        if (new == NULL){return false;}
         new->key = id;
         new->data = x;
         new->prox = p;
