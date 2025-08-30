@@ -7,6 +7,7 @@ typedef struct Node {
     struct Node *prox;
 } Node;
 
+// é foda
 
 int main() {
     return 0;
