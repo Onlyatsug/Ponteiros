@@ -49,6 +49,7 @@ int main() {
 
 Função Remove(ref: head: Pno):lógico
 var
+    retard: Pno
     RemoveUltimo(ref: head, ant: Pno):lógico
     inicio
         se head = NULO então
@@ -65,7 +66,8 @@ var
         retorne RemoveUltimo(head->prox, head)
     fim Função
 inicio
-    retorne RemoveUltimo(head, NULO)
+    retard <- NULO
+    retorne RemoveUltimo(head, retard)
 fim Função
 
 
