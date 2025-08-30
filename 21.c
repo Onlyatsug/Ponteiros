@@ -7,7 +7,45 @@ typedef struct Node {
     struct Node *prox;
 } Node;
 
+bool RemoveOnPos(Node **head, int p){
+    if (*head == NULL){
+        return false;
+    }
+    if (p == 1){
+        Node *trash = *head;
+        *head = (*head)->prox;
+        free(trash);
+        return true;
+    }
+    Node *q = *head;
+    int pos = 1;
+    while (q->prox != NULL && pos < p - 1){
+        pos++;
+        q = q->prox;
+    }
+    if (q->prox == NULL){
+        return false;
+    }
+    Node *trash = q->prox;
+    q->prox = q->prox->prox;
+    free(trash);
+    return true;
+}
 
+// recursivo
+
+bool RemoveNaPosR(Node **head, int p){
+    if (*head == NULL){
+        return false;
+    }
+    if (p == 1){
+        Node *trash = *head;
+        *head = (*head)->prox;
+        free(trash);
+        return true;
+    }
+    return RemoveNaPosR((&(*head)->prox), p-1);
+}
 
 
 int main() {
