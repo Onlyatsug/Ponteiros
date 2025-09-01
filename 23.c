@@ -42,6 +42,6 @@ inicio
         resto <- RemoverMaiorOuIgualaX(head, x)
         retorne VERDADEIRO
     senão
-        retorne RemoverMaiorOuIgualaX(head^.prox, x)
+        retorne RemoverMaiorOuIgualaX(head^.prox,)
 
 */
