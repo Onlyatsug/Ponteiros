@@ -53,7 +53,8 @@ tipos
             str: string
             prox: Pno
          fim registro
-Função Iguais(head, head_two: Pno): lógico
+
+Função VerificaSeListasSaoIguais(head, head_two: Pno): lógico
     enquanto head != NULO e head_two != NULO faça
         se head^.str != head_two^.str então
             retorne FALSO
@@ -63,23 +64,22 @@ Função Iguais(head, head_two: Pno): lógico
     fim enquanto
     se head = NULO e head_two = NULO então
         retorne VERDADEIRO
-    se não
-        retorne FALSO
     fim se
+    retorne FALSO
 fim Função
 
 recursiva
 
-Função Iguais(head, head_two: Pno): lógico
+Função VerificaSeListasSaoIguais(head, head_two: Pno): lógico
     se head = NULO e head_two = NULO então
         retorne VERDADEIRO
     fim se
     se head = NULO ou head_two = NULO então
-        retorne FALSE
+        retorne FALSO
     fim se
     se head^.str != head_two^.str então
-        retorne FALSE
-    senão
-        retorne Iguais(head^.prox, head_two^.prox)
+        retorne FALSO
+    fim se
+    retorne VerificaSeListasSaoIguais(head^.prox, head_two^.prox)
 fim Função
 */

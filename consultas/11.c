@@ -55,7 +55,8 @@ tipos
             key: inteiro
             prox: Pno
          fim registro
-Função existOn(head: Pno, x: inteiro): lógica
+
+Função XApareceEmListaOrdenada(head: Pno, x: inteiro): lógico
 var
     p: Pno
 inicio
@@ -71,18 +72,15 @@ fim Função
 
 recursiva
 
-Função existOn(head: Pno, x: inteiro): lógico
-var
-    p: Pno
+Função XApareceEmListaOrdenadaR(head: Pno, x: inteiro): lógico
 inicio
-    p <- head
-    se p = NULO || p^.key > x então
+    se head = NULO || head^.key > x então
         retorne FALSO
     fim se
-    se p^.key = x então
+    se head^.key = x então
         retorne VERDADEIRO
     senão
-        retorne existOn(p^.prox, x)
+        retorne XApareceEmListaOrdenadaR(head^.prox, x)
     fimse
 fim Função
 

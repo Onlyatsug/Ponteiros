@@ -53,34 +53,31 @@ tipos
             texto: string
             prox: Pno
           fim registro
-Função MaiorStr(head: Pno): string
+
+Função MaiorString(head: Pno): string
 var 
-    response: string
+    bigger,: string
+    p: Pno
 inicio
     se head = NULO então
         retorne ""
     fim se
-    response <- head^.texto
-    head <- head^.prox
-    enquanto head != NULO faça
-        se head^.texto > response então
-            response <- head^.texto
+    bigger <- head^.texto
+    p <- head^.prox
+    enquanto p != NULO faça
+        se p^.texto > bigger então
+            bigger <- p^.texto
         fim se
-        head <- head^.prox
+        p <- p^.prox
     fim enquanto
-    retorne response
+    retorne bigger
 fim Função
 
 recursiva
 
-tipos
-    Tno = registro
-            texto: string
-            prox: Pno
-          fim registro
-Função MaiorStr(head: Pno): string
+Função MaiorStringR(head: Pno): string
 var
-    response: string
+    bigger: string
 inicio
     se head = NULO então
         retorne ""
@@ -88,11 +85,12 @@ inicio
     se head^.prox = NULO então
         retorne head^.texto
     fim se
-    reponse <- MaiorStr(head^.prox)
-    se head^.texto > response então
+    bigger <- MaiorStringR(head^.prox)
+    se head^.texto > bigger então
         retorne head^.texto
-    senão
-        retorne response
     fim se
+    retorne bigger
 fim Função
+
+
 */

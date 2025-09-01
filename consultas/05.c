@@ -27,22 +27,22 @@ tipo
             prox: PNo
           fim registro
     Pno = ponteiro para Tno
-Função StrInTheMiddle(head: PNo): string
+
+Função ElementoDoMeio(head: PNo): string
 var
     slow: PNo
     fast: Pno
 inicio
-    slow <- head
-    fast <- head
     se head = NULO então
         retorne ""
-    senão
-        enquanto fast != NULO e fast^.prox != NULO faça
-            slow <- slow^.prox
-            fast <- fast^.prox^.prox
-        fim enquanto
-        retorne slow^.texto
     fim se
+    slow <- head
+    fast <- head
+    enquanto fast != NULO e fast^.prox != NULO faça
+        slow <- slow^.prox
+        fast <- fast^.prox^.prox
+    fim enquanto
+    retorne slow^.texto
 fim Função
 
 */

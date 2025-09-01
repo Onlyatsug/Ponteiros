@@ -24,8 +24,13 @@ tipo
             prox: Pno
           fim registro
 var
-    Função IsEmpty(init:Pno): lógico
+
+    Função VerificaSeListaVazia(head:Pno): lógico
     inicio
-        retorne (init = NULO)
+        se head = NULO então
+            retorne VERDADEIRO
+        senão
+            retone FALSO
+        fim se
     fim Função
 */

@@ -38,28 +38,31 @@ tipo
             prox: Pno
           fim registro
     Pno = ponteiro para Tno
-Função IsOn(head:Pno, x: real): lógica
+
+Função XApareceNaLista(head:Pno, x: real): lógico
+    p: Pno
 inicio
-    enquanto head != NULO faça
-        se head^.valor = x então
+    p <- head
+    enquanto p != NULO faça
+        se p^.valor = x então
             retorne VERDADEIRO
         fim se
-        head <- head^.prox
+        p <- p^.prox
     fim enquanto
     retorne FALSO
 fim Função
 
 recursiva
 
-tipo
-    Tno = registro
-            valor: real
-            prox: Pno
-          fim registro
-    Pno = ponteiro para Tno
-Função IsOn(head: Pno, x: real): lógica
+Função XApareceNaLista(head: Pno, x: real): lógico
 inicio
-    retorne head != NULO e (head^.valor = x ou IsOn(head^.prox, x))
+    se head = NULO então
+        retorne FALSO
+    fim se
+    se head.valor = x então
+        retorne VERDADEIRO
+    fim se
+    retorne IsOn(head.prox, x)
 fim Função
 
 */

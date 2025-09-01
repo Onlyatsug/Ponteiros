@@ -64,7 +64,8 @@ tipos
             key: inteiro
             prox: Pno
          fim registro
-Função XanY(head:Pno x, y: inteiro): lógico
+
+Função XeYNaLista(head:Pno x, y: inteiro): lógico
 var
     p: Pno
     xCheck: lógico
@@ -85,33 +86,20 @@ fim Função
 
 Recursiva
 
-Função XandY(head: Pno, x, y: inteiro): lógica
+Função XeYNaListaR(head: Pno, x, y: inteiro): lógica
 var
-    p: Pno
-    Function searchY(head: Pno, y: inteiro): lógica
-    var
-        p: Pno
-    inicio
-        p <- head
-        se p = NULO então
-            retorne FALSO
-        fim se
-        se p^.key = y então
-            retorne VERDADEIRO
-        senão
-            retorne searchY(p^.prox, y)
-        fim se
-    fim Função
+    xCheck: lógico
 inicio
-    p <- head
-    se p = NULO então
+    se head = NULO então
         retorne FALSO
     fim se
-    se p^.key = x então
-        retorne searchY(p^.prox, y)
-    senão
-        retorne XandY(p^.prox, x, y)
+    se head.key = x então
+        xCheck <- VERDADEIRO
     fim se
+    se head.key = y e xCheck então
+        retorne VERDADEIRO
+    fim se
+    retorne XeYNaListaR(head.prox, x, y, xCheck)
 fim Função
 
 */

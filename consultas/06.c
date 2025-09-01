@@ -46,38 +46,38 @@ tipo
             prox: Pno
           fim registro
     Pno = ponteiro para Tno
-Função CharInPosition(head: Pno, p: inteiro): string
+    
+Função ElementoNaPosicao(head: Pno, p: inteiro): string
 var
     index: inteiro
+    q: Pno
 inicio
+    se head = NULO ou p < 1 então
+        retorne ""
+    fim se
     index <- 1
-    enquanto head != NULO e index <= p faça
-        se index == p então
-            retorne head^.texto
+    q <- head
+    enquanto q != NULO faça
+        se index = p então
+            retorne q^.texto
         fim se
         index = index + 1
-        head = head^.prox
+        q = q^.prox
     fim enquanto
     retorne ""
 fim Função
 
+recursivo 
 
-tipo
-    Tno = registro
-            texto: string
-            prox: Pno
-          fim registro
-    Pno = ponteiro para Tno
-Função CharInPosition(head: Pno, p: inteiro): string
+Função ElementoNaPosicao(head: Pno, p: inteiro): string
 inicio
-    se head = NULO então
+    se head = NULO ou p < 1 então
         retorne ""
     fim se
-    se p > 1 então
-        retorne CharInPosition(head^.prox, p-1)
-    senão
-        retorne head^.texto
-    fim se 
+    se p = 1 então
+        retorne head^.texto 
+    fim se
+    retorne ElementoNaPosicao(head^.prox, p - 1)
 fim Função
 
 */

@@ -50,12 +50,13 @@ tipos
             key: inteiro
             prox: Pno
          fim registro
-Função XeYJuntos(head: Pno, x, y: inteiro): lógica
+
+Função XeYJuntos(head: Pno, x, y: inteiro): lógico
 var
     p: Pno
 inicio
     p <- head
-    enquanto p != NULO ou p^.prox != NULO faça
+    enquanto p != NULO e p^.prox != NULO faça
         se p^.key = x e p^.prox^.key = y então
             retorne VERDADEIRO
         fim se
@@ -66,18 +67,16 @@ fim Função
 
 recursiva
 
-Função XeYJuntosR(head: Pno, x, y: inteiro): lógica
-var
-    p: Pno
+Função XeYJuntosR(head: Pno, x, y: inteiro): lógico
 inicio
-    p <- head
-    se p = NULO ou p^.prox = NULO então
+    se head = NULO ou head^.prox = NULO então
         retorne FALSO
     fim se
-    se p^.key = x e p^.prox^.key = y então
-        retorne TRUE
+    se head^.key = x e head^.prox^.key = y então
+        retorne VERDADEIRO
     senão
-        retorne XeYJuntos(p^.prox, x, y)
+        retorne XeYJuntosR(head^.prox, x, y)
     fim se
 fim Função
+
 */

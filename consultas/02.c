@@ -34,41 +34,38 @@ int main(){
 
 interativa
 
-tipo
+tipos
     TNo = registro
-            valor: inteiro
+            valor: real
             prox: PNo
           fim registro
     PNo = ponteiro para TNo
-Função CountLen(head: PNo)
+
+Função ContarTamanhoDaLista(head: PNo): inteiro
 var
-    head: PNo
     count: inteiro
-    current_head: PNo
+    p: head
 inicio
+    se head = NULO então
+        retorne 0
+    fim se
     count <- 0
-    current_head <- head
-    enquanto current_head != NULO faça
+    p <- head
+    enquanto p != NULO faça
         count <- count + 1
-        current_head <- current_head^.prox
+        p <- p.prox
     fim enquanto
     retorne count
 fim Função
 
 recursiva
 
-tipo
-    TNo = registro
-            valor: inteiro
-            prox: PNo
-          fim registro
-    PNo = ponteiro para TNo
-Função CountLen(head: Pno)
+Função ContarTamanhoDaListaR(head: Pno)
 inicio
     se head = NULO então
         retorne 0
     senão
-        retorne CountLen(head^.prox) + 1;
+        retorne ContarTamanhoDaListaR(head^.prox) + 1;
     fim se
 fim Função
 */

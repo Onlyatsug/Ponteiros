@@ -27,16 +27,25 @@ tipos
             prox: Pno
           fim registro
     Pno = ponteiro para TNo
-Função Somar(head: Pno): inteiro
+
+Função CalcularMedia(head: Pno): inteiro
 var
-    soma: inteiro
+    soma, count, p: inteiro
 inicio
+    se head = NULO então
+        retorne 0
+    fim se
+
     soma <- 0
-    enquanto head != NULO faça
-        soma <- soma + head^.valor
-        head <- head^.prox
+    count <- 0
+    p <- head
+    enquanto p != NULO faça
+        soma <- soma + p.valor
+        contador <- contador + 1
+        p <- p.prox
     fim enquanto
-    retorne soma
+    retorne soma / contador
 fim Função
+
 
 */
