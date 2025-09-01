@@ -34,6 +34,7 @@ tipos
             info: string
             prox: PNo
          fim registro
+
 Função InserirNoInicio(ref: head: Pno, ch: inteiro, x: string): lógico
 var
     new: Pno
@@ -46,5 +47,6 @@ inicio
     new^.info <- x
     new^.prox <- head
     head <- new
+    retorne VERDADEIRO
 fim Função
 */

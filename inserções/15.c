@@ -62,6 +62,8 @@ tipos
             info: string
             prox: PNo
          fim registro
+
+        
 Função InserirNoFinal(ref: head, x:string): lógico
 var
     p, new: PNo
@@ -72,28 +74,20 @@ inicio
     fim se
     new^.info <- x
     new^.prox <- NULO
-    
-    se head == NULO então
+    se head = NULO então
         head <- new
         retorne VERDADEIRO
-    senão
-        p <- head
-        enquanto p^.prox != NULO faça
-            p <- p^.prox
-        fim enquanto
-        p^.prox <- new
-        retorne VERDADEIRO
     fim se
+    p <- head
+    enquanto p^.prox != NULO faça
+        p <- p^.prox
+    fim enquanto
+    p^.prox <- new
+    retorne VERDADEIRO
 fim Função
 
 recursiva
 
-tipos
-    PNo: ponteiro para TNo
-    TNo: registro
-            info: string
-            prox: PNo
-         fim registro
 Função InserirNoFinal(ref: head, x:string): lógico
 var
     new: Pno
@@ -106,11 +100,9 @@ inicio
         new^.info <- x
         new^.prox <- NULO
         head <- new
-
         retorne VERDADEIRO
-    senão
-        retorne InserirNoFInal(head^.prox, x)
     fim se
+    retorne InserirNoFInal(head^.prox, x)
 fim Função
 
 

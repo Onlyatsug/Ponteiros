@@ -1,0 +1,172 @@
+<body>
+<div style="background: #116; padding: 40px 0; text-align: center; color: #ffffff; font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg" alt="Lua flat design" width="283" height="159" />
+<p style="margin: 10px 0 0 0; font-size: 1rem;"> </p>
+<p style="margin: 10px 0 0 0; font-size: 1rem;"><strong>Simples, leve e poderosa.</strong></p>
+</div>
+<div style="margin: 30px auto; max-width: 800px; font-family: Arial, sans-serif; font-size: 1rem; line-height: 1.6; color: #333;">
+<div style="margin: 0 auto; max-width: 900px; padding: 20px;">
+<h1>Lua</h1>
+<hr />
+<h2>Características Principais</h2>
+<p>Lua é uma linguagem de script reconhecida por sua <strong>rapidez</strong> — benchmarks mostram que está entre as mais velozes do gênero. É <strong>portátil</strong>, compilando em praticamente qualquer dispositivo com um compilador C padrão. Além disso, é <strong>leve, simples e poderosa</strong>.</p>
+<p>Seu uso mais conhecido está na indústria de <strong>jogos digitais</strong> e em <strong>automação</strong>. Embora seja imperativa, também suporta múltiplos paradigmas, tornando-a flexível de acordo com a necessidade. Implementada como uma biblioteca em C, Lua se integra facilmente a outros sistemas.</p>
+<p>De acordo com o índice TIOBE, Lua aparece por volta da posição 30 no ranking global. Mesmo não estando entre as linguagens mais usadas do mundo, mantém relevância, principalmente em jogos e sistemas embarcados.</p>
+<hr />
+<h2>Árvore Genealógica</h2>
+<p>Criada no Brasil, Lua é resultado da síntese de ideias de várias linguagens anteriores, dando origem a algo inovador e amplamente utilizado. Sua genealogia é mais uma <strong>linha de influências</strong> do que uma descendência direta.</p>
+<ul>
+<li><strong>1958: Lisp</strong> — Criada por John McCarthy.<br /> <em>Influência:</em> manipulação flexível de dados e natureza funcional, refletida na simplicidade e expressividade da Lua, especialmente no uso de tabelas.</li>
+<li><strong>1969: SETL</strong> — Desenvolvida por Jacob T. Schwartz (NYU).<br /> <em>Influência:</em> uso da teoria dos conjuntos inspirou a versatilidade das tabelas em Lua.</li>
+<li><strong>1972: C</strong> — Desenvolvida por Dennis Ritchie (Bell Labs).<br /> <em>Influência:</em> base da implementação de Lua, garantindo portabilidade e integração eficiente.</li>
+<li><strong>1975: Scheme</strong> — Dialeto de Lisp, criado no MIT.<br /> <em>Influência:</em> minimalismo e semântica clara.</li>
+<li><strong>1977: AWK</strong> — Criada por Aho, Weinberger e Kernighan.<br /> <em>Influência:</em> mostrou o poder de scripts pequenos e eficazes.</li>
+<li><strong>1987: Perl</strong> — Criada por Larry Wall.<br /> <em>Influência:</em> versatilidade e manipulação de texto.</li>
+<li><strong>1993: Lua</strong> — Criada por Roberto Ierusalimschy, Luiz Henrique de Figueiredo e Waldemar Celes no Tecgraf/PUC-Rio.<br /> <em>Motivação:</em> linguagem de script leve, eficiente e incorporável, ideal para projetos gráficos e automação.</li>
+</ul>
+<p><strong>Impacto e Uso</strong></p>
+<ul>
+<li><strong>1997:</strong> LucasArts usa Lua em <em>Grim Fandango</em>.</li>
+<li><strong>2008:</strong> Surge o Corona SDK (hoje Solar2D).</li>
+<li><strong>2009:</strong> Lançado o framework Love2D.</li>
+<li><strong>2013:</strong> Lua passa a ser usada em predefinições do MediaWiki (Wikipédia).</li>
+<li><strong>Presente:</strong> utilizada em jogos (Roblox, CryEngine), sistemas embarcados, servidores (Nginx) e como linguagem de extensão.</li>
+</ul>
+<p><em>Possível árvore genealógica:</em></p>
+<p><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/genealogia.png" alt="Árvore genealógica da linguagem Lua" width="753" height="809" /></p>
+<hr />
+<h2>Sintaxe</h2>
+<p>Lua possui uma sintaxe <strong>simples, limpa e minimalista</strong>, projetada para ser fácil de aprender e usar.</p>
+<h3>Comentários</h3>
+<p style="text-align: justify;"><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/coment%C3%A1rios.png?time=1755446083572" alt="" width="333" height="223" /></p>
+<h3>Variáveis</h3>
+<p>As variáveis são globais por padrão, a menos que seja usado <code>local</code>.</p>
+<p><code><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/variaveis%20%281%29.png" alt="" width="363" height="170" /><br /><br /><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Para a atribuição de strings</span><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br /></span><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">mensagem = "Olá mundo!"</span><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><br /></span><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">mensagem = 'Olá mundo!'</span><br /></code></p>
+<h3>Operadores</h3>
+<p><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Lua possui operadores para realizar diversas operações, muitos são intuitivos. Eles se dividem em algumas categorias principais:</span></p>
+<ul>
+<li><strong>Aritméticos:</strong> <code>+ - * / % ^</code></li>
+<li><strong>Relacionais:</strong> <code>== ~= &lt; &gt; &lt;= &gt;=</code></li>
+<li><strong>Lógicos:</strong> <code>and or not</code></li>
+<li><strong>Concatenação:</strong> <code>..</code></li>
+</ul>
+<div><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/carbon%286%29.png" alt="" width="396" height="167" /></div>
+<div> </div>
+<h3>Estruturas de Controle</h3>
+<p><strong>Condicionais:</strong></p>
+<p><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/carbon%285%29.png?time=1755447852522" alt="" width="320" height="204" /></p>
+<pre> </pre>
+<p><strong>Laços:</strong></p>
+<p><code><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>while</strong>: Repete enquanto uma condição é verdadeira.</span> </code></p>
+<p><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/carbon%287%29.png" alt="" width="396" height="167" /></span></p>
+<p> </p>
+<p><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>repeat ... until</strong>: Repete até que uma condição seja verdadeira (inverso do while).</span></p>
+<p><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/carbon%288%29.png" alt="" width="396" height="167" /></span></p>
+<p> </p>
+<p><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>for var = inicio, fim, passo do ... end</strong>: Para repetir um número fixo de vezes.</span></p>
+<p><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/carbon%289%29.png" alt="" width="398" height="131" /></span></p>
+<p> </p>
+<p><span style="font-size: 11pt; font-family: Arial, sans-serif; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"><strong>for com ipairs e pairs</strong>: Usado para percorrer tabelas (ipairs percorre arrays e pairs percorre dicionários)</span></p>
+<p><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/carbon%2811%29.png" alt="" width="583" height="167" /></p>
+<h3>Funções</h3>
+<p>Definidas com a palavra function. Elas podem ou não receber argumentos e retornar valores.</p>
+<p><code><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/carbon.png" alt="" width="359" height="278" /><br /><span class="nolink"><strong><br /></strong></span></code></p>
+<p><span><strong>Funções Nativas:</strong> Lua oferece um conjunto de funções nativas e bibliotecas padrão que são essenciais para operações comuns. Alguns exemplos incluem:</span></p>
+<ul>
+<li dir="ltr">
+<p dir="ltr"><strong>print(...)</strong>: Imprime valores na saída padrão.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><strong>type(value)</strong>: Retorna o nome do tipo de um valor.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span><strong>tostring(value)</strong>: </span><span>Converte um valor em sua representação string.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span><strong>tonumber(value)</strong>: </span><span>Tenta converter uma string para um número.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span><strong>error(message)</strong>: </span><span>Para a execução e exibe uma mensagem de erro.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span><strong>table.insert(table, [pos], value)</strong>: </span><span>Adiciona um elemento a uma tabela.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span><strong>table.remove(table, [pos])</strong>:</span><span> Remove um elemento de uma tabela.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span><strong>table.sort(table</strong>):</span><span> Ordena os elementos de uma tabela.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span><strong>math.abs(x)</strong>: </span><span>Retorna o valor absoluto de um número.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span><span><span><strong>string.len(s)</strong>: </span><span>Retorna o comprimento de uma string.</span></span></span></p>
+</li>
+</ul>
+<h3>Tabelas</h3>
+<p><span><span>Em Lua, tabelas são estruturas de dados dinâmicas e flexíveis que funcionam como arrays, dicionários e até objetos, sendo a base para a organização e manipulação de informações na linguagem.</span><span><br /></span></span></p>
+<p><span><span><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/Exemplo-Tabelas.png" alt="" width="856" height="1017" /></span></span></p>
+<pre> </pre>
+<h3>Palavras Reservadas</h3>
+<p><span><span>São termos com um significado fixo para a linguagem, que não podem ser utilizados como identificadores para variáveis, funções ou quaisquer outras entidades definidas pelo programador. São poucas e ajudam a manter a linguagem simples:</span></span></p>
+<p><code>and, break, do, else, elseif, end, false, for, function, if, in, local, nil, not, or, repeat, return, then, true, until, while</code></p>
+<hr />
+<h2>Variáveis, Vinculação e Escopo</h2>
+<h3>Nomes</h3>
+<ul>
+<li>Sensível a maiúsculas/minúsculas (<code>Idade</code> ≠ <code>idade</code>)</li>
+<li>Sem tamanho máximo específico</li>
+<li>Devem começar por letra ou sublinhado (<code>_variavel</code>)</li>
+<li>Palavras reservadas não podem ser usadas como identificadores</li>
+</ul>
+<h3>Vinculação</h3>
+<ul>
+<li><strong>Estática e Dinâmica:</strong> variáveis locais são <em>estáticas</em> (definidas em tempo de compilação do chunk), enquanto globais são <em>dinâmicas</em> (criadas em tempo de execução se não existirem).</li>
+<li><strong>Exemplo de vinculação dinâmica:</strong></li>
+</ul>
+<address><code>x = 10 -- variável global criada dinamicamente </code></address>
+<h3>Tipos</h3>
+<ul>
+<li>A vinculação de tipo é <strong>dinâmica</strong>, ocorre em tempo de execução.</li>
+<li>Declarações não especificam tipo — qualquer variável pode mudar de tipo.</li>
+<li>Checagem de tipos é dinâmica, com erros lançados em tempo de execução.</li>
+</ul>
+<h3>Memória</h3>
+<p>Lua suporta as 4 categorias:</p>
+<ul>
+<li><strong>Estática:</strong> variáveis internas da própria VM.</li>
+<li><strong>Stack:</strong> variáveis locais a funções (desalocadas ao sair do escopo).</li>
+<li><strong>Heap:</strong> tabelas, strings e funções criadas dinamicamente (com garbage collector).</li>
+<li><strong>Constantes literais:</strong> armazenadas internamente durante execução.</li>
+</ul>
+<p>Exemplos:</p>
+<p><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/Exemplo-Mem%C3%B3ria.png" alt="" width="676" height="674" /></p>
+<p> </p>
+<h3>Escopo</h3>
+<p>Por padrão, variáveis são <strong>globais</strong>. O uso de <code>local</code> define escopo <strong>estático léxico</strong>.</p>
+<pre><code>x = 5
+function teste()
+    local x = 10
+    print(x) -- 10
+end
+teste()
+print(x) -- 5
+</code></pre>
+<hr />
+<h2>Tipos de Dados em Lua</h2>
+<ul>
+<li><strong>Nil:</strong> representa ausência de valor.</li>
+<li><strong>Boolean:</strong> somente <code>false</code> e <code>nil</code> são falsos.</li>
+<li><strong>Number:</strong> ponto flutuante de dupla precisão (IEEE 754).</li>
+<li><strong>String:</strong> imutável, pode ser delimitada por aspas simples, duplas ou colchetes.</li>
+<li><strong>Table:</strong> estrutura de dados universal (arrays, listas, dicionários, objetos).</li>
+<li><strong>Function:</strong> de primeira classe, podem ser anônimas ou armazenadas em tabelas.</li>
+<li><strong>Userdata:</strong> tipo especial para integrar C/C++ com Lua.</li>
+<li><strong>Thread:</strong> implementa corrotinas, permitindo multitarefa cooperativa.</li>
+</ul>
+<p>Exemplo:</p>
+<p><img src="https://novoava.ufmt.br/graduacao/draftfile.php/624230/user/draft/336444671/Exemplo-de-Tipos-de-Dados.png" alt="" width="856" height="1200" /></p>
+</div>
+</div>
+
+</body>
