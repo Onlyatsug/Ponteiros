@@ -136,12 +136,11 @@ Procedimento InverterArvore(raiz: PNo)
 var
     temp: PNo
 inicio
-    se raiz = NULO então
-        retorne
+    se raiz != Nulo então
+        aux <- raiz^.esq
+        raiz^.esq <- raiz^.dir
+        raiz^.dir <- aux
+        InverteArvoreBinaria(raiz^.dir)
+        InverteArvoreBinaria(raiz^.esq)
     fim se
-    temp <- raiz^.esq
-    raiz^.esq <- raiz^.dir
-    raiz^.dir <- temp
-    InverterArvore(raiz^.esq)
-    InverterArvore(raiz^.dir)
 fim Procedimento
