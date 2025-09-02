@@ -2,7 +2,7 @@
 /* complexa, leva tempo */
 
 2- questão
-/* Iverter lista, já fiemos isso. */
+/* Iverter lista, já fizemos isso. */
 
 
 3- questão
