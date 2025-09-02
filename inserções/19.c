@@ -24,16 +24,16 @@ int main() {
 
 /*
 
-RemoveFirstElement(Node **head):lógico
+RemovePrimeiroElementoref: Node **head):lógico
 var
-    lixo: Pno
+    trash: Pno
 inicio
     se head = NULO então
         retorne FALSO
     fim se
-    lixo <- head
+    trash <- head
     head <- head^.prox
-    desaloca(lixo)
+    desaloca(trash)
     retorne VERDADEIRO
 fim Função
 

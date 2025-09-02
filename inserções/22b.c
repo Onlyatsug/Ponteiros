@@ -13,7 +13,7 @@ int main() {
 }
 
 /*
-Função RemoveXduo(ref head, x: string): lógico
+Função RemoveOcorrenciaDeXDupla(ref head, x: string): lógico
 var
     p: Pno
 inicio
@@ -38,25 +38,22 @@ fim Função
 
 // recursiva
 
-Função RemoveXduoRec(ref: head, x: string): lógico
+Função RemoveOcorrenciaDeXDupla(ref: head, x: string): lógico
+var
+    trash: Pno
 inicio
     se head = NULO então
         retorne FALSO
     fim se
-
     se head^.x = x então
-        se head^.prox != NULO então
-            head^.prox^.prev <- head^.prev
+        trash <- head
+        head <- head^.prox  
+        se head != NULO então
+            head^.prev <- trash^.prev
         fim se
-        se head^.prev != NULO então
-            head^.prev^.prox <- head^.prox
-        senão
-            head <- head^.prox
-        fim se
-        desaloca(head)
+        desaloca(trash)
         retorne VERDADEIRO
     fim se
-
     retorne RemoveXduoRec(head^.prox, x)
 fim Função
 

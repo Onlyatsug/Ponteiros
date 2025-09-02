@@ -47,27 +47,46 @@ int main() {
 }
 /*
 
-Função Remove(ref: head: Pno):lógico
+Função RemoveUltimoELemento(ref: head: Pno): lógico
 var
-    retard: Pno
-    RemoveUltimo(ref: head, ant: Pno):lógico
-    inicio
-        se head = NULO então
-            retorne FALSO
-        fim se
-        se head^.prox = NULO então
-            desaloca(head)
-            head <- NULO
-            se ant != NULO então
-                ant^.prox <- NULO
-            fim se
-           retorne VERDADEIRO
-        fim se
-        retorne RemoveUltimo(head->prox, head)
-    fim Função
+    p, ant: Pno
 inicio
-    retard <- NULO
-    retorne RemoveUltimo(head, retard)
+    se head = NULO então
+        retorne FALSO
+    fim se
+    se head^.prox = NULO então
+        desaloca(head)
+        head <- NULO
+        retorne VERDADEIRO
+    fim se
+    ant <- NULO
+    p <- head
+    enquanto p^.prox != NULO faça
+        ant <- p
+        p <- p^.prox
+    fim enquanto
+    ant^.prox <- NULO
+    desaloca(p)
+    retorne VERDADEIRO
+fim Função
+
+
+Função RemoveUltimo(ref: head: Pno):lógico
+inicio
+    se head = NULO então
+        retorne FALSO
+    fim se
+    se head^.prox = NULO então
+        desaloca(head)
+        head <- NULO
+        retorne VERDADEIRO
+    fim se
+    se head^.prox^.prox = NULO então
+        desaloca(head^.prox)
+        head^.prox <- NULO
+        retorne VERDADEIRO
+    fim se
+    retorne RemoveUltimo(head^.prox)
 fim Função
 
 

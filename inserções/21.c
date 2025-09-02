@@ -53,12 +53,12 @@ int main() {
 }
 /*
 
-Função RemoveNaPos(ref: head: Pno, p: inteiro):lógico
+Função RemoveNaPosicaoP(ref: head: Pno, p: inteiro):lógico
 var
     q, trash: Pno
     pos: inteiro
 inicio
-    se head = NULO então
+    se head = NULO ou p < 1 então
         retorne FALSO
     fim se
     se p = 1 então
@@ -69,7 +69,7 @@ inicio
     fim se
     q <- head
     pos <- 1
-    enquanto q^.prox != NULO e pos < p-1 faça
+    enquanto q^.prox != NULO e pos < p - 1 faça
         pos <- pos + 1
         q <- q^.prox
     fim enquanto
@@ -84,11 +84,11 @@ fim Função
 
 recursiva
 
-Função RemoveNaPos(ref: head: Pno, p: inteiro):lógico
+Função RemoveNaPosicaoP(ref: head: Pno, p: inteiro):lógico
 var
     trash: Pno
 inicio
-    se head = NULO então
+    se head = NULO  ou p < 1 então
         retorne FALSO
     fim se
     se p = 1 então
@@ -97,7 +97,7 @@ inicio
         desaloca(trash)
         retorne VERDADEIRO
     fim se
-    retorne RemoveNaPos(head, p-1)
+    retorne RemoveNaPosicaoP(head^.prox, p - 1)
 fim Função
 
 

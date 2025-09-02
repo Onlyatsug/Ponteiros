@@ -2,11 +2,13 @@
 
 Função RemoverMaiorOuIgualaX(ref: head: Pno, x: string): lógico
 var
-    p, ant, trash:  Pno
+    p, ant, trash: Pno
+    removido: lógico
 inicio
     p <- head
     ant <- NULO
-    enquanto p != NULO então
+    removido <- FALSO
+    enquanto p != NULO faça
         se p^.value >= x então
             trash <- p
             se ant = NULO então
@@ -16,14 +18,14 @@ inicio
             fim se
             p <- p^.prox
             desaloca(trash)
-            retorne VERDADEIRO
-        se não
+            removido <- VERDADEIRO
+        senão
             ant <- p
             p <- p^.prox
         fim se
     fim enquanto
-    retorne FALSO
-fim se
+    retorne removido
+fim Função
 
 recursiva
 
@@ -41,7 +43,8 @@ inicio
         desaloca(trash)
         resto <- RemoverMaiorOuIgualaX(head, x)
         retorne VERDADEIRO
-    senão
-        retorne RemoverMaiorOuIgualaX(head^.prox,)
-
+    fim se
+    resto <- RemoverMaiorOuIgualaX(head^.prox,x)
+    retorne resto
+fim Função
 */

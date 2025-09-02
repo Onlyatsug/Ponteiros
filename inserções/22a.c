@@ -50,11 +50,11 @@ int main() {
 
 /*
 
-Função DeleteX(ref: head, x: string):lógico
+Função DeletarOcorreciaDeX(ref: head, x: string):lógico
 var
     p, trash: Pno
 inicio
-    se head = NULO então
+    se head = NULO  então
         retorne FALSO
     fim se
     se head^.x = x então
@@ -77,30 +77,19 @@ inicio
 fim Função
 
 
-FunçãoDeletarOcorrenciaDeX(ref: head: Pno, x: string): lógico
+Função RemoveOcorrenciaDeXR(ref: head: Pno, x: string): lógico
 var
-    ant: Pno
-    Função DeletarX(ref: head, ant: Pno, x: string):lógico
-    var
-        trash: Pno
-    inicio
-        se head = NULO então
-            retorne FALSO
-        fim se
-        se head^.x == x então
-            trash <- head
-            se ant == NULO então
-                head <- head^.prox
-            senão
-                ant^.prox <- head^.prox
-            fim se
-            desaloca(trash)
-            retorne VERDADEIRO
-        fim se
-        retorne DeletarX(head->prox, head, x)
-    fim Função
+    trash: Pno
 inicio
-    ant <- NULO
-    retorne DeletarX(head, ant, x);
+    se head = NULO então
+        retorne FALSO
+    fim se
+    se head^.x = x então
+        trash <- head
+        head <- head^.prox
+        desaloca(trash)
+        retorne VERDADEIRO
+    fim se
+    retorne RemoveOcorrenciaDeX(head^.prox, x)
 fim Função
 */;

@@ -11,7 +11,7 @@ inicio
     count <- 0
     p <- head
     enquanto p != NULO e p^.prox != NULO faça
-        se p^.value == p^.prox^.value então
+        se p^.value = p^.prox^.value então
             trash <- p^.prox
             p^.prox <- p^prox^.prox
             desaloca(trash)
@@ -19,7 +19,7 @@ inicio
         senão
             p <- p^.prox
         fim se
-    fim se
+    fim enquanto
     retorne count
 fim Função
 
@@ -32,11 +32,11 @@ inicio
     se head = NULO ou head^.prox = NULO então
         retorne 0
     fim se
-    se head^.value == head^.prox^.value então
+    se head^.value = head^.prox^.value então
         trash <- head^.prox
         head^.prox <- head^.prox^.prox
         desaloca(trash)
-        retone 1 + RemoverDuplivados(head^.prox)
+        retone 1 + RemoverDuplivados(head)
     fim se
     retorne RemoverDuplicados(head^.prox)
 fim Função
