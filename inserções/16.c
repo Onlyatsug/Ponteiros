@@ -58,7 +58,8 @@ tipos
             elemento: string
             prox: Pno      
           fim registro
-Função InserirOrdenado(ref: head: Pno, ch: int, x: string): lógico
+
+Função InserirOrdenado(ref: head: Pno, ch: inteiro, x: string): lógico
 var
     p, new: Pno
 inicio
@@ -68,21 +69,40 @@ inicio
     fim se
     new^.key <- ch
     new^.elemento <- x
+    new^.prox <- NULO
     
-    se head = NULO ou head^.key >= ch então
+    se head = NULO ou ch < head^.key então
         new^.prox <- head
         head <- new
-    senão
-        p <- head
-        enquanto p^.prox != NULO e ch > p^.prox^.key faça
-            p <- p^.prox
-        fim enquanto
-
-        new^.prox <- p^.prox
-        p^.prox <- new 
+        retorne VERDADEIRO
     fim se
+    p <- head
+    enquanto p^.prox != NULO e p^.prox^.key < ch faça
+        p <- p^.prox
+    fim enquanto
+    new^.prox <- p^.prox
+    p^.prox <- new 
     retorne VERDADEIRO
 fim Função
 
+recursivo
+
+Função InserirOrdenadoR(ref: head: Pno, ch: inteiro, x: string): lógico
+var
+    new: Pno
+inicio
+    se head = NULO ou ch < head^.key então
+        new <- aloca(Pno)
+        se new = NULO então
+            retorne FALSO
+        fim se
+        new^.key <- ch
+        new^.elemento <- x
+        new^.prox <- head
+        head <- new
+        retorne VERDADEIRO
+    fim se
+    retorne InserirOrdenadoR(head^.prox, ch, x)
+fim Função
 
 */

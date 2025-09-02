@@ -61,14 +61,18 @@ Tno = registro
         prox: Pno
       fim registro
 Pno = ponteiro para Tno
-Função InserirEmPosiçãoSimples(head: Pno, ch, position: inteiro):lógico
+
+Função InserirEmPosiçãoSimples(ref: head: Pno, ch, position: inteiro):lógico
 var
     p, new: Pno;
     pos: inteiro;
 incio
+    se position < 1 então
+        retorne FALSO
+    fim se
     new <- aloca(Tno)
     new^.key <- ch
-    se p = 1 então
+    se position = 1 então
         new^.prox <- head
         head <- new
         retorne VERDADEIRO
@@ -90,10 +94,16 @@ fim Função
 
 // recursivo
 
-Função InserirEmPosiçãoSimples(head: Pno, ch, position: inteiro):lógico
+Função InserirEmPosiçãoSimplesR(head: Pno, ch, position: inteiro):lógico
 inicio
+    se position < 1 então
+        retorne FALSO
+    fim se
     se position = 1 então
         new <- aloca(Tno)
+        se new = NULO então
+            retorne FALSO
+        fim se
         new^.key <- ch
         new^.prox <- head
         head <- new
@@ -102,7 +112,7 @@ inicio
     se head = NULO então
         retorne FALSO
     fim se
-    retorne InserirEmPosiçãoSimples(head->prox, ch, position -1):lógico
+    retorne InserirEmPosiçãoSimplesR(head->prox, ch, position -1):lógico
 fim Função
 
 */

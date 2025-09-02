@@ -63,33 +63,35 @@ tipos
             prox: Pno
           fim registro
     Pno = ponteiro para Tno
-Função InserirOrndenadoNãoRepetido(ref: head: Pno, ch: inteiro, info: string):lógico
+
+Função inserirOrdenado_Iterativo(ref: head: Pno, ch: inteiro, info: string): lógico
 var
-    p, new: Pno
+    new, p, ant: Pno
 inicio
     new <- aloca(Tno)
     se new = NULO então
-        retorne FALSO
+        retorne FALSO 
     fim se
     new^.key <- ch
     new^.value <- info
-    se head = NULO ou ch <= head^.key então
-        se head != NULO e ch = head^.key então
-            retorne FALSO
-        fim se
-        new^.prox <- head
-        head <- new
-        retorne VERDADEIRO
-    fim se
+    new^.prox <- NULO
+    ant <- NULO
     p <- head
-    enquanto p^.prox != NULO e ch <= p^.prox^.key então
-        se ch == p^.prox^.key então
-            retorne FALSO
-        fim se
+    enquanto p != NULO e p^.key < ch então
+        ant <- p
         p <- p^.prox
     fim enquanto
-    new^.prox <- p^.prox
-    p^.prox <- new
+
+    se p != NULO e p^.key = ch então
+        desaloca(new) 
+        retorne FALSO
+    fim se
+    new^.prox <- p
+    se ant = NULO então
+        head <- new
+    senão
+        ant^.prox <- new
+    fim se
     retorne VERDADEIRO
 fim Função
 
@@ -115,4 +117,5 @@ inicio
         retorne Ordena(head^.prox, ch, info)
     fim se
 fim Função
+
 */
