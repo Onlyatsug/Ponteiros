@@ -15,13 +15,13 @@ inicio
         p^.prox <- head
         head <- p
     fim se
-fim Função
+fim Procedimento
 
 recursiva
 
-Procedimento InverterOPrimeiroeUltimo(ref: head: Pno)
+Procedimento InverterOPrimeiroeUltimoR(ref: head: Pno)
 var
-    p, last: PNo
+    last: PNo
 inicio
     se head != NULO e head^.prox != NULO então
         se head^.prox^.prox = NULO então
@@ -30,10 +30,10 @@ inicio
             last^prox <- head
             head <- last 
         senão
-            InverterOPrimeiroeUltimo(head^.prox)
+            InverterOPrimeiroeUltimoR(head^.prox)
         fim se
-    fim seS
-fim Função
+    fim se
+fim Procedimento
 
 
 */
